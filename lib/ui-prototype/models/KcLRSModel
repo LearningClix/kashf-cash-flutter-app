@@ -1,0 +1,70 @@
+class KcLRSModel {
+  int? _clntSeq;
+  int? _ChrgDue;
+  String? _dueDt;
+  int? _pymtAmt;
+  String? _pymtDt;
+  String? _pymtType;
+
+  KcLRSModel(
+      {int? _clntSeq,
+         int? _ChrgDue,
+         String? _dueDt,
+         int? _pymtAmt,
+         String? _pymtDt,
+         String? _pymtType}) {
+
+    if (clntSeq != null) {
+      this._clntSeq = clntSeq;
+    }
+    if (pymtAmt != null) {
+      this._pymtAmt = pymtAmt;
+    }
+
+    if (ChrgDue != null) {
+      this._ChrgDue = ChrgDue;
+    }
+    if (dueDt != null) {
+      this._dueDt = dueDt;
+    }
+    if (pymtDt != null) {
+      this._pymtDt = pymtDt;
+    }
+    if (pymtType != null) {
+      this._pymtType = pymtType;
+    }
+  }
+
+  int? get clntSeq => _clntSeq;
+  set clntSeq(int? clntSeq) => _clntSeq = clntSeq;
+  String? get pymtAmt => _pymtAmt;
+  set pymtAmt(String? pymtAmt) => _pymtAmt = pymtAmt;
+  int? get ChrgDue => _ChrgDue;
+  set ChrgDue(int? ChrgDue) => _ChrgDue = ChrgDue;
+  String? get dueDt => _dueDt;
+  set dueDt(String? dueDt) => _dueDt = dueDt;
+  String? get pymtDt => _pymtDt;
+  set pymtDt(String? pymtDt) => _pymtDt = pymtDt;
+  String? get pymtType => _pymtType;
+  set pymtType(String? pymtType) => _pymtType = pymtType;
+
+  LRSDto.fromJson(Map<String, dynamic> json) {
+    _clntSeq = json['clntSeq'];
+    _pymtAmt = json['pymtAmt'];
+    _ChrgDue = json['ChrgDue'];
+    _dueDt = json['dueDt'];
+    _pymtDt = json['pymtDt'];
+    _pymtType = json['pymtType'];
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['clntSeq'] = this._clntSeq;
+    data['pymtAmt'] = this._pymtAmt;
+    data['ChrgDue'] = this._ChrgDue;
+    data['dueDt'] = this._dueDt;
+    data['pymtDt'] = this._pymtDt;
+    data['pymtType'] = this._pymtType;
+    return data;
+  }
+}
