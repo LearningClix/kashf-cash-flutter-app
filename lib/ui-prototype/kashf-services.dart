@@ -91,7 +91,6 @@ class _KashfServices1State extends State<KashfServices1> {
                             0 * fem, 0 * fem, 0 * fem, 12 * fem),
                         width: double.infinity,
                         height: 74 * fem,
-                        // add comments
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
