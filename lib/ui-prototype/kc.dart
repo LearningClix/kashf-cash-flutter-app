@@ -175,7 +175,7 @@ class _KCState extends State<KC> {
     String formattedDate = DateFormat('dd-MM-yyyy').format(parsedDate);
     return formattedDate;
   }
-
+  // the method is used to fetch data from server
   Future<List<KcLRSModel>> getLRSData() async {
    // String URL = 'http://192.168.100.11:8080/get-client-KC-LRS/18100001455/-2';
    // String URL = 'http://192.168.159.39:8080/get-client-KC-LRS/18100001455/-2';
